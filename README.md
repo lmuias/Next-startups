@@ -29,7 +29,7 @@ image or video).
 and many more, including the latest **React 19**, **Next.js 15** and **Sanity** features alongside code architecture and
 reusability
 
-## <a name="tech-stack">⚙️ Tech Stack</a>
+## <a name="tech-stack">Tech Stack</a>
 
 - React 19
 - Next.js 15
