@@ -24,8 +24,6 @@ image or video).
 
 **Search**: Search functionality to load and view pitches efficiently.
 
-**Minimalistic Design**: Fresh and simple UI with only the essential pages for ease of use and a clean aesthetic.
-
 and many more, including the latest **React 19**, **Next.js 15** and **Sanity** features alongside code architecture and
 reusability
 
