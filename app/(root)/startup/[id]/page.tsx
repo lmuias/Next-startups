@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { Suspense } from "react";
 import { client } from "@/sanity/lib/client";
 import {
@@ -43,7 +44,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
 
       <section className="section_container">
         <img
-          src={post.image}
+          src={post.image || ''}
           alt="thumbnail"
           className="w-full h-auto rounded-xl"
         />
@@ -55,7 +56,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
               className="flex gap-2 items-center mb-3"
             >
               <Image
-                src={post.author.image}
+                src={post && post.author && post.author.image ? post.author.image : ''}
                 alt="avatar"
                 width={64}
                 height={64}
@@ -63,9 +64,9 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
               />
 
               <div>
-                <p className="text-20-medium">{post.author.name}</p>
+                <p className="text-20-medium">{post && post.author && post.author.name && post.author.name}</p>
                 <p className="text-16-medium !text-black-300">
-                  @{post.author.username}
+                  @{post && post.author && post.author.username && post.author.username}
                 </p>
               </div>
             </Link>

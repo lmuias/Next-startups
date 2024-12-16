@@ -219,3 +219,41 @@
 .w-md-editor-toolbar {
     padding: 10px !important;
 }
+
+.navbar-item-hover {
+    @apply block py-2 relative hover:opacity-50 transition-opacity;
+}
+
+.navbar-item-hover::before {
+    @apply absolute bottom-0 content-[''] block w-full h-0.5 bg-black scale-0 origin-left transition-transform;
+}
+
+.navbar-item-hover:hover::before {
+    @apply scale-100;
+}
+
+
+.block-title {
+    @apply text-5xl font-bold uppercase;
+}
+
+.text-outline {
+    @apply font-bold bg-black text-white px-2 py-1;
+}
+
+.block_container {
+    @apply flex-col w-full py-10 px-6 bg-orange-400 pattern flex items-center;
+}
+
+
+.list-item {
+    @apply bg-black p-2 rounded-md ml-3 relative hover:scale-95 transition-transform cursor-pointer;
+}
+
+.list-item::before {
+    @apply absolute -left-3 top-2/4 content-[''] block w-2 h-2 rounded-full bg-white;
+}
+
+.list-item_title {
+    @apply font-bold ;
+}
