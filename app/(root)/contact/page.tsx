@@ -1,9 +1,6 @@
 import ContactForm from '@/components/ContactForm'
 import Image from 'next/image'
 import React from 'react'
-import Twitter from '../../../public/twitter.svg';
-import Facebook from '../../../public/facebook.svg';
-import Instagram from '../../../public/instagram.svg';
 
 const Contact = () => {
   return <>
@@ -33,21 +30,21 @@ const Contact = () => {
               href="https://x.com/" 
               className='hover:opacity-55 hover:scale-95 transition-all'
             >
-              <Image src={Twitter} width={24} height={24} alt='twitter' />
+              <Image src='/twitter.svg' width={24} height={24} alt='twitter' />
             </a>
             <a 
               target='blank' 
               href="https://www.facebook.com/" 
               className='hover:opacity-55 hover:scale-95 transition-all'
             >
-              <Image src={Facebook} width={24} height={24} alt='facebook' />
+              <Image src='/facebook.svg' width={24} height={24} alt='facebook' />
             </a>
             <a 
               target='blank' 
               href="https://www.instagram.com/" 
               className='hover:opacity-55 hover:scale-95 transition-all'
             >
-              <Image src={Instagram} width={24} height={24} alt='instagram' />
+              <Image src='/instagram.svg' width={24} height={24} alt='instagram' />
             </a>
           </div>
         </div>

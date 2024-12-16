@@ -1,7 +1,5 @@
-import Image from 'next/image'
-import React from 'react'
-import IdeaImage from '../../../public/Idea.jpg';
-import StartupImage from '../../../public/startups.jpg';
+import Image from 'next/image';
+import React from 'react';
 import Link from 'next/link';
 
 const About = () => {
@@ -16,9 +14,11 @@ const About = () => {
         <div className='flex max-sm:flex-col items-center gap-10 lg:gap-20'>
           <div className='min-w-[320px] md:min-w-[400px] max-w-[560px] flex-grow'>
             <Image 
-              src={IdeaImage} 
+              src='/Idea.jpg' 
               alt='idea'
               sizes="100vw"
+              width={320}
+              height={640}
               style={{
                 width: '100%',
                 height: 'auto',
@@ -75,11 +75,13 @@ const About = () => {
           <p className='font-bold text-white uppercase max-w-[280px] text-center'>
             Find <Link href="/startup/create" className="text-outline">Create</Link> section in navbar menu and become a part of our family with creating a new pitch!
           </p>
-          <div className='min-w-[320px] max-h-[250px] lg:min-w-[400px] lg:max-h-[310px] max-w-[560px] flex-grow'>
+          <div className='min-w-[320px] max-h-[360px] lg:min-w-[400px] lg:max-h-[310px] max-w-[560px] flex-grow'>
             <Image 
-              src={StartupImage} 
+              src='/startups.jpg' 
               alt='idea'
               sizes="100vw"
+              width={320}
+              height={360}
               style={{
                 width: '100%',
                 height: 'auto',
