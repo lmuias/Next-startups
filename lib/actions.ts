@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 'use server';
 
 import { auth } from "@/auth";
@@ -6,7 +5,7 @@ import { parseServerACtionResopnse } from "./utils";
 import slugify from 'slugify';
 import { writeClient } from "@/sanity/lib/write-client";
 
-export const createPitch = async (state: any, form: FormData, pitch: string) => {
+export const createPitch = async (state: unknown, form: FormData, pitch: string) => {
   const session = await auth();
 
   if (!session) return  parseServerACtionResopnse({

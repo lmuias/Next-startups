@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import React, { useState, useActionState } from "react";
@@ -19,7 +18,7 @@ const StartupForm = () => {
   const { toast } = useToast();
   const router = useRouter();
 
-  const handleFormSubmit = async (prevState: any, formData: FormData) => {
+  const handleFormSubmit = async (prevState: unknown, formData: FormData) => {
     try {
       const formValues = {
         title: formData.get("title") as string,
@@ -54,8 +53,10 @@ const StartupForm = () => {
           description: "Please check your inputs and try again",
           variant: "destructive",
         });
-
-        return { ...prevState, error: "Validation failed", status: "ERROR" };
+        
+        return typeof prevState === 'object' 
+        ? { ...prevState, error: "Validation failed", status: "ERROR" } 
+        : {error: "Validation failed", status: "ERROR"};
       }
 
       toast({
@@ -64,8 +65,13 @@ const StartupForm = () => {
         variant: "destructive",
       });
 
-      return {
+      return typeof prevState === 'object' 
+      ? {
         ...prevState,
+        error: "An unexpected error has occurred",
+        status: "ERROR",
+      }
+      : {
         error: "An unexpected error has occurred",
         status: "ERROR",
       };

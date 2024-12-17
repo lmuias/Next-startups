@@ -257,3 +257,11 @@
 .list-item_title {
     @apply font-bold ;
 }
+
+.burger-open {
+    @apply translate-x-0;
+}
+
+.body-hidden {
+    @apply overflow-hidden;
+}
